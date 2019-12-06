@@ -27,14 +27,14 @@ def proof_of_work(last_proof):
     
     #block_string = json.dumps(last_block, sort_keys=True)
    
-    proof = 0
+    proof = random.randint(-10000000,10000000)
 
     #had to seperate encoding of last hash and proof to compare
     # last_hash_encode = f'{last_proof}'.encode()
     # last_hash = hashlib.sha256(last_hash_encode).hexdigest()
 
     while valid_proof(last_proof, proof) is False:
-        proof += random.randint(-1000000,1000000)
+        proof += 1
         
     
 

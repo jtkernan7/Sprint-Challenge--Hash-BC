@@ -34,7 +34,7 @@ def proof_of_work(last_proof):
     # last_hash = hashlib.sha256(last_hash_encode).hexdigest()
 
     while valid_proof(last_proof, proof) is False:
-        proof += random.randint(-1000000,1000000)
+        proof += random.randint(0,100)
         
     
 
